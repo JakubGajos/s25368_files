@@ -4,10 +4,13 @@ long long factorial(int n)
 {
     if(n>1)
     {
-    for(int i=n;i>1;i--)
+    int i=n;
+    do    
     {
         n=n*(i-1);
+        i--;
     }
+    while(i>1);
     return n;
     }
     else return 1;     
