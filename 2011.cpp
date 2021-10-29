@@ -17,7 +17,7 @@ int rectangle(int a, int b)
 int main()
 {
     int a,b;
-    std::cout<<"podaj wymiary prostokąta: ";std::cin>>a;std::cin>>b;
+    std::cout<<"podaj wymiary prostokąta:";std::cin>>a;std::cin>>b;
     rectangle(a,b);
     return 0;
 }
