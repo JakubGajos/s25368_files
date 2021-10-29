@@ -1,8 +1,5 @@
 #include <iostream>
-<<<<<<< HEAD
 
-int 
-=======
 #include <string>
 
 
@@ -44,4 +41,3 @@ int main()
     loop(s);
 	return 0;
 }
->>>>>>> 93dea5b2590180ac3794ea629a69d66c9d494298

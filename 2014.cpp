@@ -2,6 +2,8 @@
 
 int rectangle(int a, int b)
 {
+    if(a>=3 && b>=3)
+	{
     for(int i=a;i>0;i--) //petla od wysokosci
     {
 	if(i==a||i==1)
@@ -27,6 +29,8 @@ int rectangle(int a, int b)
 	}
     std::cout<<"\n";
     }
+	}
+	else std::cout<<"a lub b musi byc wieksze od 3"<<std::endl;
     return a;
 }
 
