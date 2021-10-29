@@ -6,12 +6,12 @@ int rectangle(int a, int b)
     {
 	if(i==a||i==1)
 	{        
-		for(int i=b;i>0;i--) //petla dla zewnetrznych linnii (pełne)
+		for(int i=b;i>0;i--) //petla dla zewnetrznych lini (pełne)
 	        {
 	        std::cout<<"*";
 	        }
 	}
-	else
+	else //petla dla pustych lini
 	{
 		for(int i=b;i>0;i--)
 		{
