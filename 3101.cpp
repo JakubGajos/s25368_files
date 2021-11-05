@@ -1,14 +1,15 @@
 #include <iostream>
-
-int init(int n, int a[n])// -> void
-{
-	return a[n]={0};
-}
+using namespace std;
 
 int main()
 {
+	const int max=100;
+	int tab [max]={};
 	int n;
-	int a[10];
-	init(n,a[n]);
+	cout<<"podaj n";cin>>n;
+	for(int i=0;i<n;i++)
+	{
+		cout<<tab[i];	
+	}
 	return 0;
 }
