@@ -12,7 +12,7 @@ void min_max(int n)
 	int max=A[0];
 	for(int i=0;i<n;i++)
 	{
-		for(int j=0;j<n;j++)//porownanie elementu A[i] z elementami od A[i] do A[n-1]
+		for(int j=0;j<n;j++)//porownanie elementu A[i] z elementami od A[0] do A[n-1]
 		{
 			if(A[i]<A[j] && A[i]<=min) min=A[i];
 			if(A[i]<A[j] && A[j]<=min) min=A[j];
