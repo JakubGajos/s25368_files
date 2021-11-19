@@ -46,6 +46,6 @@ int main()
 	cout<<"podaj zakres liczb losowych: ";cin>>n;
 	insert_table(n);
 	quick_sort();
-	//show_table();
+	show_table();
 	return 0;
 }
