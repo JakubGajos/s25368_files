@@ -2,31 +2,36 @@
 #include <vector>
 using namespace std;
 
-int main()
+vector<int> number;
+int a;
+void insert_table(int a)//dodaje nowy element do tablicy number
 {
-	int i=0;
-	int a;
-	vector <int> number;
-	do
+	number.push_back(a);
+}
+void show_table()//wypisuje wszystkie elementy tablicy w odpowiednim szyku
+{
+	for(int j=0;j< number.size() ;j++)
 	{
-		cin>>a;
-		number.push_back(a);
-		i++;
-	}
-	while(number[i-1]!=0);
-	for(int j=0;j<(i-1);j++)
-	{
-		if(j%5==0)
+	if(j%5==0)
 		{
-		cout<<"\n";
-		cout<<"		"<<number[j];
+		cout<<number[j]<<"\n";
 		}
-		else
+	else
 		{
-		cout<<"		"<<number[j];
+		cout<<"	"<<number[j]<<"	";
 		}
 	}
 	cout<<"\n";
+}
+int main()
+{
+	do
+	{
+	cin>>a;
+	insert_table(a);
+	}
+	while(a!=0);
+	show_table();
 	return 0;
 }
 	

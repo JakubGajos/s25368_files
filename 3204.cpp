@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include <string>
 using namespace std;
 
 vector<int> A;
@@ -15,13 +15,13 @@ void insert_table(int n)
 	}
 }
 
-void bubble_sort()
+void bubble_sort_down()
 {
 	int i=0;
 	int s=0;
 	do
 	{
-		if(A[i]>A[i+1])
+		if(A[i]<A[i+1])
 		{
 			int x=A[i];// x = zmienna pomocnicza
 			A[i]=A[i+1];
@@ -33,7 +33,7 @@ void bubble_sort()
 	while(i!=A.size()-1);
 	if(i==A.size()-1 && s!=0)// sprawdzamy czy zostały dokonane jakies przestawienia w ciągu przejścia (zmienna s)
 	{
-		bubble_sort();
+		bubble_sort_down();
 	}
 }
 
@@ -42,16 +42,17 @@ void show_table()
 	for(int i=0;i<A.size();i++)
 	{
 		cout<<A[i]<<" ";
-	}	
+	}
 	cout<<"\n";
 }
+
 int main()
-{
+{	
 	int n;
-	cout<<"podaj n ";
+	cout<<"podaj rozmiar tablicy: ";
 	cin>>n;
 	insert_table(n);
-	bubble_sort();
+	bubble_sort_down();
 	show_table();
-	return 0;
+	return 0;	
 }
