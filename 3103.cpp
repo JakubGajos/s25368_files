@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-	int A[50];
+	const int MAX=50;
+	int A[MAX];
 	int k;
 	cout<<"podaj liczbe k ";cin>>k;
 	for(int i=0;i<50;i++)

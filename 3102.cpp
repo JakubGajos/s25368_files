@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 
+const int MAX=100;
+int A[MAX]={};
+
 void tablica(int n, int s)
 {
-	int A[n];
 	A[0]=s;
 	for(int i=0;i<n;i++)
 	{

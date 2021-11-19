@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 
+const int MAX=100;
+
 int suma(int n)
 {
-	int A[n];
+	int A[MAX];
 	int s=0;
 	for(int i=0;i<n;i++)
 	{

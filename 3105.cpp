@@ -1,33 +1,47 @@
 #include <iostream>
 using namespace std;
 
-void min_max(int n)
+const int MAX=100;
+int A[MAX];
+
+
+void insert_tab(int n)
 {
-	int A[n];
 	for(int i=0;i<n;i++)//wprowadzenie elementow tablicy
 	{
 		cout<<"A["<<i<<"]:";cin>>A[i];
 	}
-	int min=A[0];
-	int max=A[0];
-	for(int i=0;i<n;i++)
+	cout<<"\n";
+}
+
+int i=0;
+int n;
+int mx=0;//indeks max
+int mn=1;//indeks min
+
+void min_max(int i)
+{
+	if(A[i]>A[i+1] && A[i]>A[mx])
 	{
-		for(int j=0;j<n;j++)//porownanie elementu A[i] z elementami od A[0] do A[n-1]
-		{
-			if(A[i]<A[j] && A[i]<=min) min=A[i];
-			if(A[i]<A[j] && A[j]<=min) min=A[j];
-			if(A[i]>A[j] && A[i]>=max) max=A[i];
-			if(A[i]>A[j] && A[j]<=min) min=A[j];
-		}
+		mx=i; //zapisywanie indeksu wartosci max pod j
 	}
-	cout<<"MIN: "<<min<<endl;
-	cout<<"MAX:"<<max<<endl;
+	if(A[i]<A[i+1] && A[i]<A[mn])
+	{
+		mn=i;
+	}
+	if(i<n-1)
+	{
+		i++;
+		min_max(i);
+	}
 }
 
 int main ()
-{	
-	int n;
-	cout<<"podaj liczbe elemntow tablicy A: ";cin>>n;
-	min_max(n);
+{
+	cout<<"podaj liczbe elemntow tablicy A: ";cin>>n; cout<<"\n";
+	insert_tab(n);
+	min_max(i);
+	cout<<"MAX["<<mx<<"]:"<<A[mx]<<"\n";
+	cout<<"MIN["<<mn<<"]:"<<A[mn];
 	return 0;
 }

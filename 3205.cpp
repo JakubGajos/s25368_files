@@ -3,16 +3,21 @@
 
 using namespace std;
 
-int A[64];
-int B[64];
+int A[63];
+int i=0;
+int j=63;
+int p;
 
 void insert_table(int n)
 {
-	int p;
-	
+	pivot=(rand()%(n+1)+0);//element środkowy, pivot
+	for(int i=0;i<64;i++)
+	{
+	A[i]=(rand()%(n+1)+0);
+	}
 }
 
-void quick_sort(int A[],int B[])
+void quick_sort(int i,int j)
 {	
 	
 }
@@ -25,7 +30,7 @@ int main()
 	int n;
 	cout<<"podaj zakres liczb losowych: ";cin>>n;
 	insert_table(n);
-	quick_sort(A,B);
+	quick_sort();
 	//show_table();
 	return 0;
 }
