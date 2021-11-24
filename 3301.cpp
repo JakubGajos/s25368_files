@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 int j=0;
 char side_border() //boczna granica (znak)
