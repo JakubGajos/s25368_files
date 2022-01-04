@@ -7,7 +7,7 @@ void cone(int h, int r)
 {
 	double f=pi*pow(2,r);
 	double v=(f/3)*h;
-	cout<<"objętość wynosi:"<<v<<"\n"<<"pole podstawy wynosi"<<f<<"\n";
+	cout<<"objętość wynosi: "<<v<<"\n"<<"pole podstawy wynosi: "<<f<<"\n";
 }
 
 int main()
