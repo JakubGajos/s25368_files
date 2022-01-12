@@ -1,19 +1,16 @@
-#include <string.h>
 #include <iostream>
+#include <string.h>
 using namespace std;
-
-void *memset(void *s,char c, size_t n)
-{
-	int m=n;
-	for(int i=0;i<m;i++)
-	{
-		s=&c;
-	}
-	return s;
-}
-
+	
 int main()
 {
-	void *memset(void *s,char c,size_t n);
+	char c;
+	int n;
+	char s[30];
+	cout<<"podaj wyraz:";cin>>s;
+	cout<<"podaj pojedynczą litere jaka ma być zastosowana:";cin>>c;
+	cout<<"podaj liczbę bajtów ciągu n:";cin>>n;
+	memset(s, c, n);
+	puts(s);//odczytanie tablicy charów po zmianach wprowadzonych przez funckję memset.
 	return 0;
 }
